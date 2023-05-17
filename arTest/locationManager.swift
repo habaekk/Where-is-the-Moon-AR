@@ -21,7 +21,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         self.locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
-            self.locationManager.startUpdatingLocation()
+            self.locationManager.requestLocation ()
         }
     }
     
