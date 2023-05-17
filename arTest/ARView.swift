@@ -14,16 +14,25 @@ struct ARViewContainer: UIViewRepresentable {
         
         let arView = ARView(frame: .zero)
         
+        
+        
         // Load the "Box" scene from the "Experience" Reality File
         let boxAnchor = try! Experience.loadBox()
 
         // Add the box anchor to the scene
         arView.scene.anchors.append(boxAnchor)
         
+        boxAnchor.actions.notifier.onAction = printer
+        
 //        let moonAnchor = try! Experience.loadMoon()
 //        arView.scene.anchors.append(moonAnchor)
         
         return arView
+        
+    }
+    
+    func printer(_ entity: Entity?) -> Void {
+        print("Scene Start")
         
     }
     

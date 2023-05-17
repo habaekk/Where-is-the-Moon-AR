@@ -27,27 +27,21 @@ struct ContentView : View {
         VStack {
             Text("Latitude: \(currentLatitude)")
                 .font(.headline)
-                .padding()
             
             Text("Current Year: \(currentYear)")
                 .font(.headline)
-                .padding()
             
             Text("Current Month: \(currentMonth)")
                 .font(.headline)
-                .padding()
             
             Text("Current Day: \(currentDay)")
                 .font(.headline)
-                .padding()
             
             Text("Current Hour: \(currentHour)")
                 .font(.headline)
-                .padding()
             
             Text("Current LunDay: \(currentLunDay)")
                 .font(.headline)
-                .padding()
             
             Button(action: {
                 // Request location permission again
@@ -56,6 +50,8 @@ struct ContentView : View {
                 Text("Request Location Permission")
             }
             .padding()
+            
+            ARViewContainer().edgesIgnoringSafeArea(.all)
             
         }
     }
