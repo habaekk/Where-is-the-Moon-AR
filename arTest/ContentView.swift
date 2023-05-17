@@ -7,32 +7,29 @@
 
 import SwiftUI
 import RealityKit
+import CoreLocation
+import CoreLocationUI
 
 struct ContentView : View {
+    @ObservedObject private var locationManager = LocationManager()
     var body: some View {
-        ARViewContainer().edgesIgnoringSafeArea(.all)
+        
+        VStack {
+            Text("Latitude: \(locationManager.userLatitude)")
+                .font(.headline)
+                .padding()
+            
+            Button(action: {
+                // Request location permission again
+                CLLocationManager().requestWhenInUseAuthorization()
+            }) {
+                Text("Request Location Permission")
+            }
+        }
     }
 }
 
-struct ARViewContainer: UIViewRepresentable {
-    
-    func makeUIView(context: Context) -> ARView {
-        
-        let arView = ARView(frame: .zero)
-        
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
-        
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
-        
-        return arView
-        
-    }
-    
-    func updateUIView(_ uiView: ARView, context: Context) {}
-    
-}
+
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
@@ -41,3 +38,12 @@ struct ContentView_Previews : PreviewProvider {
     }
 }
 #endif
+
+
+//if (CLLocationManager.headingAvailable()) {
+//    Text("Available")
+//    //ARViewContainer().edgesIgnoringSafeArea(.all)
+//} else {
+//    Text("Heading is not available.")
+//    }
+//}
