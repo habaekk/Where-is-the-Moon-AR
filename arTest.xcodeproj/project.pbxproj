@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57AABA432A13EF1300801CC5 /* moonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AABA422A13EF1300801CC5 /* moonHelper.swift */; };
+		57AABA432A13EF1300801CC5 /* Moon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AABA422A13EF1300801CC5 /* Moon.swift */; };
 		57AABA472A14C3D800801CC5 /* locationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AABA462A14C3D800801CC5 /* locationManager.swift */; };
 		57AABA492A14C7D800801CC5 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AABA482A14C7D800801CC5 /* ARView.swift */; };
+		57AABA4D2A17625500801CC5 /* MoonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AABA4C2A17625500801CC5 /* MoonHelper.swift */; };
 		57D21BA02A037D0E00041D2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D21B9F2A037D0E00041D2E /* AppDelegate.swift */; };
 		57D21BA22A037D0E00041D2E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D21BA12A037D0E00041D2E /* ContentView.swift */; };
 		57D21BA42A037D0E00041D2E /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 57D21BA32A037D0E00041D2E /* Experience.rcproject */; };
@@ -18,9 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		57AABA422A13EF1300801CC5 /* moonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moonHelper.swift; sourceTree = "<group>"; };
+		57AABA422A13EF1300801CC5 /* Moon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moon.swift; sourceTree = "<group>"; };
 		57AABA462A14C3D800801CC5 /* locationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationManager.swift; sourceTree = "<group>"; };
 		57AABA482A14C7D800801CC5 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+		57AABA4C2A17625500801CC5 /* MoonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHelper.swift; sourceTree = "<group>"; };
 		57D21B9C2A037D0E00041D2E /* arTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D21B9F2A037D0E00041D2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57D21BA12A037D0E00041D2E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,7 +67,8 @@
 				57D21BA32A037D0E00041D2E /* Experience.rcproject */,
 				57D21BA52A037D1100041D2E /* Assets.xcassets */,
 				57D21BA72A037D1100041D2E /* Preview Content */,
-				57AABA422A13EF1300801CC5 /* moonHelper.swift */,
+				57AABA422A13EF1300801CC5 /* Moon.swift */,
+				57AABA4C2A17625500801CC5 /* MoonHelper.swift */,
 				57AABA462A14C3D800801CC5 /* locationManager.swift */,
 			);
 			path = arTest;
@@ -150,8 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				57AABA472A14C3D800801CC5 /* locationManager.swift in Sources */,
-				57AABA432A13EF1300801CC5 /* moonHelper.swift in Sources */,
+				57AABA432A13EF1300801CC5 /* Moon.swift in Sources */,
 				57D21BA22A037D0E00041D2E /* ContentView.swift in Sources */,
+				57AABA4D2A17625500801CC5 /* MoonHelper.swift in Sources */,
 				57D21BA02A037D0E00041D2E /* AppDelegate.swift in Sources */,
 				57D21BA42A037D0E00041D2E /* Experience.rcproject in Sources */,
 				57AABA492A14C7D800801CC5 /* ARView.swift in Sources */,
