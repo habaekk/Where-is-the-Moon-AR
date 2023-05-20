@@ -13,12 +13,14 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     
     @Published var userLatitude: Double = 0.0
+    @Published var userHeading: Double = 0.0
     
     override init() {
         super.init()
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingHeading()
         
         if CLLocationManager.locationServicesEnabled() {
             self.locationManager.requestLocation ()
@@ -32,5 +34,11 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        userHeading = newHeading.magneticHeading
+        print(userHeading)
+        
     }
 }
