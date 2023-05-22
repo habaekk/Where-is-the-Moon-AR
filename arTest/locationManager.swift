@@ -37,8 +37,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        userHeading = newHeading.magneticHeading
-        print(userHeading)
-        
+        userHeading = newHeading.magneticHeading        
     }
 }

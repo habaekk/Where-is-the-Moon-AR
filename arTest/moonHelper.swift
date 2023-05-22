@@ -100,4 +100,36 @@ class MoonHelper {
             return "testMoon"
         }
     }
+    
+    func getTimeDifferenceSunMoon(lunDay: Int) -> Double {
+        return (Double(lunDay) * (360/29.5)) * (1/15)
+    }
+    
+    func isMoonRise(sunTime: Double, timeDifference: Double) -> Bool {
+        
+        var moonTime = sunTime - timeDifference
+        
+        if moonTime < 0 {
+            moonTime += 24
+        }
+        
+        if (sunTime >= 18) || (sunTime <= 6) {
+            if (moonTime >= 6) && (moonTime <= 18) {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    func getMoonX(sunTime: Double, timeDifference: Double) -> Float {
+        var moonTime = sunTime - timeDifference
+        
+        if moonTime < 0 {
+            moonTime += 24
+        }
+        
+        return cos(getRadian(degree: Float((moonTime - 6) * 15)))
+    }
+    
 }

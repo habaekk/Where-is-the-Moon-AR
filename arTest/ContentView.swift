@@ -26,26 +26,6 @@ struct ContentView : View {
         
         
         VStack {
-            Text("Latitude: \(currentLatitude)")
-                .font(.headline)
-            
-            Text("Current Year: \(currentYear)")
-                .font(.headline)
-            
-            Text("Current Month: \(currentMonth)")
-                .font(.headline)
-            
-            Text("Current Day: \(currentDay)")
-                .font(.headline)
-            
-            Text("Current Hour: \(currentHour)")
-                .font(.headline)
-            
-            Text("Current LunDay: \(currentLunDay)")
-                .font(.headline)
-            
-            Text("Heading: \(currentHeading)")
-                .font(.headline)
             
             Button(action: {
                 // Request location permission again

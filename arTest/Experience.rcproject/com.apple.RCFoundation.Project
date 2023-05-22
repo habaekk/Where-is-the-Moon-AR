@@ -96,6 +96,213 @@
               "material" : "concrete",
               "overrides" : {
                 "children" : {
+                  "0FB1CD67-319D-4CAC-84A5-E984FBC97F3E" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Cue Ball"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "96CA2642-2700-48E7-B86C-F08AE6CDF8C4"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.CueBall.5281c432-2187-4024-9419-ba65867bc5b3",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "3854644C-D326-4D24-9AF8-121344108546"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0.050000272691249847,
+                        0,
+                        -1,
+                        1
+                      ]
+                    }
+                  },
+                  "3A92EF11-A11D-4CD8-8C7D-2D396613B7D8" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Cue Ball"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "18ADD1C5-73BF-4A2D-B14F-824779355870"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.CueBall.5281c432-2187-4024-9419-ba65867bc5b3",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "B76005A8-4E83-4432-842D-486330C03898"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        0,
+                        1
+                      ]
+                    }
+                  },
+                  "3A80540A-092A-4EF1-93F2-DCFAA0F9E949" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Cue Ball"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "7DC20D0D-A5C7-42BD-92AD-AE890CD806E9"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.CueBall.5281c432-2187-4024-9419-ba65867bc5b3",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "20D350A3-F360-4335-87EA-BCEF1680A7E2"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1,
+                        1
+                      ]
+                    }
+                  },
                   "4A213441-135C-450E-8EF8-1A4EAB267C1D" : {
                     "overrides" : {
                       "arguments" : [
@@ -165,13 +372,82 @@
                         0,
                         0,
                         0,
-                        0,
+                        -0.0099999997764825821,
                         1
                       ]
                     }
                   },
                   "7F5F1ADC-E5E4-4EF5-A5B5-FC43B071FFA5" : null,
                   "632E476F-1E55-4E30-9723-1C51DD2E8B89" : null,
+                  "A7A8772F-CB45-4564-A8CA-82B4ACE5CC67" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Cue Ball"
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Stylized"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "FFC5A24B-C111-4AD9-A083-C9B99AC08AB8"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.CueBall.5281c432-2187-4024-9419-ba65867bc5b3",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "841B7517-E724-47E0-A4A4-941CB8A07456"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0.5,
+                        1
+                      ]
+                    }
+                  },
                   "A27785BE-0380-4EC1-9AC9-57E500C28952" : null,
                   "B91C7CA3-4AB1-4253-9A84-07383168A8A8" : null
                 },
@@ -190,21 +466,21 @@
               "title" : "Box",
               "viewTransform" : {
                 "cameraTransform" : [
-                  0.98740112781524658,
-                  -9.2359506709271955e-09,
-                  0.15823712944984436,
+                  0.99888575077056885,
+                  -9.3931165068283917e-09,
+                  -0.047193493694067001,
                   0,
-                  0.068909585475921631,
-                  0.90019696950912476,
-                  -0.42999640107154846,
+                  -0.01403236947953701,
+                  0.95477259159088135,
+                  -0.29700586199760437,
                   0,
-                  -0.14244458079338074,
-                  0.43548300862312317,
-                  0.88885551691055298,
+                  0.04505905881524086,
+                  0.29733717441558838,
+                  0.9537087082862854,
                   0,
-                  -0.44418370723724365,
-                  1.8984596729278564,
-                  4.0376405715942383,
+                  0.56412380933761597,
+                  1.2467857599258423,
+                  4.2809329032897949,
                   1
                 ],
                 "sceneTransform" : [
