@@ -8,14 +8,20 @@
 import Foundation
 
 class MoonHelper {
+    
+    // 태양의 남중고도
     func getMeridianAltitude(lat: Float) -> Int {
         return Int(90 - lat)
     }
     
+    // '각' 을 래디안 값으로 변환
     func getRadian(degree: Float) -> Float {
         return (degree * 0.0174533)
     }
     
+    // 계절마다 남중고도가 변화함
+    // 여름에 76.5도, 겨울에 29.5도, 봄가을에 53도
+    // 계절 마다 변하는 남중고도를 위한 상수값
     func getSeasonConstant(month: Int) -> Float {
         
         var const: Float = 0.0
@@ -37,6 +43,28 @@ class MoonHelper {
         }
         
         return const
+    }
+    
+    // 달의 현재 위치 x, y, z
+    // x 값에 따라 달의 궤도에 y, z 값을 구함
+    // 현재 시간에 따라 x 값을 구함
+    
+    // 카메라 위치는 <0,0,0.5>
+    // 카메라 방향은 -z 쪽을 바라 봄.
+    
+    // '달의 일주 궤도'를 포함하는 평면이 있고
+    // 가상의 하늘(구) 인 천구가 있음
+    // 평면과 천구상의 교선을 통해 '달의 일주 궤도(원)' 을 구함
+    // 남중고도와 x 값이 주어지면, y z 를 구할 수 있음
+    
+    func getXPos(sunTime: Double, timeDifference: Double) -> Float {
+        var moonTime = sunTime - timeDifference
+        
+        if moonTime < 0 {
+            moonTime += 24
+        }
+        
+        return cos(getRadian(degree: Float((moonTime - 6) * 15)))
     }
     
     func getYPos(x: Float, s: Float, r: Float, lat: Float) -> Float
@@ -69,6 +97,7 @@ class MoonHelper {
         return zPos
     }
     
+    // 음력에 따른 달의 위상
     func moonPhase(when day: Int) -> String {
         if day > 0 && day < 4 {
             return "newMoon"
@@ -101,10 +130,13 @@ class MoonHelper {
         }
     }
     
+    // 달의 위상에 따른 태양과의 상대적인 위치를 보정하기 위함
     func getTimeDifferenceSunMoon(lunDay: Int) -> Double {
         return (Double(lunDay) * (360/29.5)) * (1/15)
     }
     
+    
+    // 하늘에서 달이 안 보이면 AR월드 에서도 달을 띄우지 않기 위함
     func isMoonRise(sunTime: Double, timeDifference: Double) -> Bool {
         
         var moonTime = sunTime - timeDifference
@@ -122,14 +154,10 @@ class MoonHelper {
         return false
     }
     
-    func getMoonX(sunTime: Double, timeDifference: Double) -> Float {
-        var moonTime = sunTime - timeDifference
+    // y 축을 기준으로 로테이션 수행
+    // 디바이스가 바라보는 방향(동서남북) 에 따라 달의 위치를 보정하기 위함
+    func rotation(x: Float, y: Float, z: Float, headingValue: Float) {
         
-        if moonTime < 0 {
-            moonTime += 24
-        }
-        
-        return cos(getRadian(degree: Float((moonTime - 6) * 15)))
     }
     
 }
