@@ -22,7 +22,7 @@ struct ARViewContainer: UIViewRepresentable {
         // Add the box anchor to the scene
         arView.scene.anchors.append(boxAnchor)
         
-        boxAnchor.actions.notifier.onAction = printer
+        boxAnchor.actions.notifier.onAction = sceneStart
         
 //        let moonAnchor = try! Experience.loadMoon()
 //        arView.scene.anchors.append(moonAnchor)
@@ -31,7 +31,7 @@ struct ARViewContainer: UIViewRepresentable {
         
     }
     
-    func printer(_ entity: Entity?) -> Void {
+    func sceneStart(_ entity: Entity?) -> Void {
         let currentLatitude = Int(locationManager.userLatitude)
         let currentHeading = Float(locationManager.userHeading)
         
