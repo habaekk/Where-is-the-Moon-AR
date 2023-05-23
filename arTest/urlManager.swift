@@ -7,7 +7,7 @@
 
 import Foundation
 
-class urlManager {
+class UrlManager {
     func urlRequest(with str: String, completion:@escaping(Int) -> ()){
         let url = URL(string: str)!
         var req = ""

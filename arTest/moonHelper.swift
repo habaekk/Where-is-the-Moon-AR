@@ -57,8 +57,8 @@ class MoonHelper {
     // 평면과 천구상의 교선을 통해 '달의 일주 궤도(원)' 을 구함
     // 남중고도와 x 값이 주어지면, y z 를 구할 수 있음
     
-    func getXPos(sunTime: Double, timeDifference: Double) -> Float {
-        var moonTime = sunTime - timeDifference
+    func getXPos(sunTime: Float, timeDifference: Double) -> Float {
+        var moonTime = Double(sunTime) - timeDifference
         
         if moonTime < 0 {
             moonTime += 24
@@ -67,7 +67,7 @@ class MoonHelper {
         return cos(getRadian(degree: Float((moonTime - 6) * 15)))
     }
     
-    func getYPos(x: Float, s: Float, r: Float, lat: Float) -> Float
+    func getYPos(x: Float, s: Float, lat: Float) -> Float
     {
         let theta: Float = getRadian(degree: (90 - lat))
         var a: Float = 1.0
@@ -82,7 +82,7 @@ class MoonHelper {
         return yPos
     }
     
-    func getZPos(x: Float, s: Float, r: Float, lat: Float) -> Float
+    func getZPos(x: Float, s: Float, lat: Float) -> Float
     {
         let theta: Float = getRadian(degree: (90 - lat))
         var a: Float = 1.0
@@ -137,9 +137,9 @@ class MoonHelper {
     
     
     // 하늘에서 달이 안 보이면 AR월드 에서도 달을 띄우지 않기 위함
-    func isMoonRise(sunTime: Double, timeDifference: Double) -> Bool {
+    func isMoonRise(sunTime: Float, timeDifference: Double) -> Bool {
         
-        var moonTime = sunTime - timeDifference
+        var moonTime = Double(sunTime) - timeDifference
         
         if moonTime < 0 {
             moonTime += 24
@@ -173,6 +173,11 @@ class MoonHelper {
         let aZ = z + 0.5
         
         return [aX, aY, aZ]
+    }
+    
+    func timeToFloat(h: Int, m: Int) -> Float {
+        let result = Float(h) + (Float(m) / 60.0)
+        return result
     }
     
 }
