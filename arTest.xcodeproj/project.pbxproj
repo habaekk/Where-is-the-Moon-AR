@@ -12,6 +12,8 @@
 		57AABA492A14C7D800801CC5 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AABA482A14C7D800801CC5 /* ARView.swift */; };
 		57AABA4D2A17625500801CC5 /* MoonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AABA4C2A17625500801CC5 /* MoonHelper.swift */; };
 		57AABA4F2A189D0E00801CC5 /* headingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AABA4E2A189D0E00801CC5 /* headingManager.swift */; };
+		57AABA752A1CB1BC00801CC5 /* urlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AABA742A1CB1BC00801CC5 /* urlManager.swift */; };
+		57AABA772A1CB5B000801CC5 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AABA762A1CB5B000801CC5 /* K.swift */; };
 		57D21BA02A037D0E00041D2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D21B9F2A037D0E00041D2E /* AppDelegate.swift */; };
 		57D21BA22A037D0E00041D2E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D21BA12A037D0E00041D2E /* ContentView.swift */; };
 		57D21BA42A037D0E00041D2E /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 57D21BA32A037D0E00041D2E /* Experience.rcproject */; };
@@ -25,6 +27,8 @@
 		57AABA482A14C7D800801CC5 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 		57AABA4C2A17625500801CC5 /* MoonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonHelper.swift; sourceTree = "<group>"; };
 		57AABA4E2A189D0E00801CC5 /* headingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headingManager.swift; sourceTree = "<group>"; };
+		57AABA742A1CB1BC00801CC5 /* urlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urlManager.swift; sourceTree = "<group>"; };
+		57AABA762A1CB5B000801CC5 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		57D21B9C2A037D0E00041D2E /* arTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D21B9F2A037D0E00041D2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57D21BA12A037D0E00041D2E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 				57AABA4C2A17625500801CC5 /* MoonHelper.swift */,
 				57AABA462A14C3D800801CC5 /* locationManager.swift */,
 				57AABA4E2A189D0E00801CC5 /* headingManager.swift */,
+				57AABA742A1CB1BC00801CC5 /* urlManager.swift */,
+				57AABA762A1CB5B000801CC5 /* K.swift */,
 			);
 			path = arTest;
 			sourceTree = "<group>";
@@ -156,7 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				57AABA472A14C3D800801CC5 /* locationManager.swift in Sources */,
+				57AABA772A1CB5B000801CC5 /* K.swift in Sources */,
 				57AABA432A13EF1300801CC5 /* Moon.swift in Sources */,
+				57AABA752A1CB1BC00801CC5 /* urlManager.swift in Sources */,
 				57AABA4F2A189D0E00801CC5 /* headingManager.swift in Sources */,
 				57D21BA22A037D0E00041D2E /* ContentView.swift in Sources */,
 				57AABA4D2A17625500801CC5 /* MoonHelper.swift in Sources */,
