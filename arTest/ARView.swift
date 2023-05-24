@@ -35,7 +35,7 @@ struct ARViewContainer: UIViewRepresentable {
     func sceneStart(_ entity: Entity?) -> Void {
         
         let moonHelper = MoonHelper()
-        print("Scene Start")
+//        print("Scene Start")
         UrlManager().urlRequest(with: UrlManager().urlManager()) { lunDay in
             
             let currentDate = Date()
@@ -45,16 +45,13 @@ struct ARViewContainer: UIViewRepresentable {
 //            let currentLatitude = Float(37.0)
             let currentHeading = Float(locationManager.userHeading)
             
-            let currentYear = Calendar.current.component(.year, from: currentDate)
             let currentMonth = Calendar.current.component(.month, from: currentDate)
-            let currentDay = Calendar.current.component(.day, from: currentDate)
             let currentHour = Calendar.current.component(.hour, from: currentDate)
 //            let currentHour = 6
             let currentMinute = Calendar.current.component(.minute, from: currentDate)
 //            let currentMinute = 0
             let currentTimeFloat = moonHelper.timeToFloat(h: currentHour, m: currentMinute)
             
-            let meridianAltitude = moonHelper.getMeridianAltitude(lat: Float(currentLatitude))
             let seasonConstant = moonHelper.getSeasonConstant(month: currentMonth)
             
             
@@ -62,9 +59,9 @@ struct ARViewContainer: UIViewRepresentable {
             
 //            if (true) {
                 
-                var x = moonHelper.getXPos(sunTime: currentTimeFloat, timeDifference: timediff)
-                var y = moonHelper.getYPos(x: x, s: seasonConstant, lat: currentLatitude)
-                var z = moonHelper.getZPos(x: x, s: seasonConstant, lat: currentLatitude)
+                let x = moonHelper.getXPos(sunTime: currentTimeFloat, timeDifference: timediff)
+                let y = moonHelper.getYPos(x: x, s: seasonConstant, lat: currentLatitude)
+                let z = moonHelper.getZPos(x: x, s: seasonConstant, lat: currentLatitude)
                 
                 let rotated = moonHelper.rotation(x: x , y: y, z: z, headingValue: currentHeading)
                 let adjusted = moonHelper.cameraPosAdjust(x: rotated[0], y: rotated[1], z: rotated[2])
@@ -74,18 +71,6 @@ struct ARViewContainer: UIViewRepresentable {
                 entity?.transform.translation.z = adjusted[2]
             }
         }
-//        print(timediff)
-//        print(currentLatitude)
-//        print(currentHeading)
-//        print(currentYear)
-//        print(currentMonth)
-//        print(currentDay)
-//        print(currentHour)
-//        print(currentMinute)
-//        print(currentTimeFloat)
-//        print(meridianAltitude)
-//        print(seasonConstant)
-//        print(moonHelper.isMoonRise(sunTime: currentTimeFloat, timeDifference: timediff))
     }
     
     func updateUIView(_ uiView: ARView, context: Context) {}
