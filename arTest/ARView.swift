@@ -40,7 +40,7 @@ struct ARViewContainer: UIViewRepresentable {
             
             let currentDate = Date()
 //            let timediff = moonHelper.getTimeDifferenceSunMoon(lunDay: lunDay)
-            let timediff = moonHelper.getTimeDifferenceSunMoon(lunDay: 6)
+            let timediff = moonHelper.getTimeDifferenceSunMoon(lunDay: 15)
             let currentLatitude = Float(locationManager.userLatitude)
             let currentHeading = Float(locationManager.userHeading)
             
