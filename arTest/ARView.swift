@@ -39,34 +39,34 @@ struct ARViewContainer: UIViewRepresentable {
         UrlManager().urlRequest(with: UrlManager().urlManager()) { lunDay in
             
             let currentDate = Date()
-//            let timediff = moonHelper.getTimeDifferenceSunMoon(lunDay: lunDay)
-            let timediff = moonHelper.getTimeDifferenceSunMoon(lunDay: 15)
+            let timediff = moonHelper.getTimeDifferenceSunMoon(lunDay: lunDay)
+//            let timediff = moonHelper.getTimeDifferenceSunMoon(lunDay:22)
             let currentLatitude = Float(locationManager.userLatitude)
+//            let currentLatitude = Float(37.0)
             let currentHeading = Float(locationManager.userHeading)
             
             let currentYear = Calendar.current.component(.year, from: currentDate)
             let currentMonth = Calendar.current.component(.month, from: currentDate)
             let currentDay = Calendar.current.component(.day, from: currentDate)
-//            let currentHour = Calendar.current.component(.hour, from: currentDate)
-            let currentHour = 18
-//            let currentMinute = Calendar.current.component(.minute, from: currentDate)
-            let currentMinute = 0
+            let currentHour = Calendar.current.component(.hour, from: currentDate)
+//            let currentHour = 6
+            let currentMinute = Calendar.current.component(.minute, from: currentDate)
+//            let currentMinute = 0
             let currentTimeFloat = moonHelper.timeToFloat(h: currentHour, m: currentMinute)
             
             let meridianAltitude = moonHelper.getMeridianAltitude(lat: Float(currentLatitude))
             let seasonConstant = moonHelper.getSeasonConstant(month: currentMonth)
             
             
-//            if (moonHelper.isMoonRise(sunTime: currentTimeFloat, timeDifference: timediff)) {
+            if (moonHelper.isMoonRise(sunTime: currentTimeFloat, timeDifference: timediff)) {
             
-            if (true) {
+//            if (true) {
                 
                 var x = moonHelper.getXPos(sunTime: currentTimeFloat, timeDifference: timediff)
                 var y = moonHelper.getYPos(x: x, s: seasonConstant, lat: currentLatitude)
                 var z = moonHelper.getZPos(x: x, s: seasonConstant, lat: currentLatitude)
                 
-//                let rotated = moonHelper.rotation(x: x , y: y, z: z, headingValue: currentHeading)
-                let rotated = [x, y, z]
+                let rotated = moonHelper.rotation(x: x , y: y, z: z, headingValue: currentHeading)
                 let adjusted = moonHelper.cameraPosAdjust(x: rotated[0], y: rotated[1], z: rotated[2])
                 
                 entity?.transform.translation.x = adjusted[0]

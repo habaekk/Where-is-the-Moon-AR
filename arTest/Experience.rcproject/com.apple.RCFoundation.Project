@@ -404,6 +404,109 @@
                   },
                   "4A213441-135C-450E-8EF8-1A4EAB267C1D" : null,
                   "7F5F1ADC-E5E4-4EF5-A5B5-FC43B071FFA5" : null,
+                  "10F384C9-0BD1-4CBB-99B3-F29BEE4E0C16" : null,
+                  "66BA0D16-6D1C-4A31-8D09-987CBB114092" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "item",
+                          {
+                            "typeName" : "String",
+                            "value" : "Cue Ball"
+                          }
+                        ],
+                        [
+                          "material",
+                          {
+                            "typeName" : "String",
+                            "value" : "paintEnamelMatte"
+                          }
+                        ],
+                        [
+                          "materialColor",
+                          {
+                            "typeName" : "double4",
+                            "value" : [
+                              0.85000002384185791,
+                              0.17000000178813934,
+                              0.50999999046325684,
+                              1
+                            ]
+                          }
+                        ],
+                        [
+                          "style",
+                          {
+                            "typeName" : "String",
+                            "value" : "Iconic"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "iconicItem" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "68BA7C60-BDDF-493C-A1A5-EA40EF77BFCC"
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "item" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "FFD6A6EB-4133-419F-9F34-A7F26CD758DB"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.CueBall.5281c432-2187-4024-9419-ba65867bc5b3",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "47FB3878-E21E-4BD0-AA1D-AF7F300C99EE"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        1,
+                        0.5,
+                        1
+                      ]
+                    }
+                  },
                   "632E476F-1E55-4E30-9723-1C51DD2E8B89" : null,
                   "A7A8772F-CB45-4564-A8CA-82B4ACE5CC67" : {
                     "overrides" : {
@@ -602,9 +705,9 @@
                   0.29733717441558838,
                   0.9537087082862854,
                   0,
-                  0.56412380933761597,
-                  1.2467857599258423,
-                  4.2809329032897949,
+                  0.66653633117675781,
+                  1.6568814516067505,
+                  4.1482391357421875,
                   1
                 ],
                 "sceneTransform" : [

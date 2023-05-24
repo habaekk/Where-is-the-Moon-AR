@@ -159,11 +159,11 @@ class MoonHelper {
     // y 축을 기준으로 로테이션 수행
     // 디바이스가 바라보는 방향(동서남북) 에 따라 달의 위치를 보정하기 위함
     func rotation(x: Float, y: Float, z: Float, headingValue: Float) -> [Float] {
-        let theta = 180.0 - headingValue
+        let theta = headingValue - 180.0
         
-        let rX = x * cos(getRadian(degree: theta)) - z * sin(getRadian(degree: theta))
+        let rX = x * cos(getRadian(degree: theta)) + z * sin(getRadian(degree: theta))
         let rY = y
-        let rZ = x * sin(getRadian(degree: theta)) - z * cos(getRadian(degree: theta))
+        let rZ = -x * sin(getRadian(degree: theta)) + z * cos(getRadian(degree: theta))
         
         return [rX, rY, rZ]
     }
