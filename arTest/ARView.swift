@@ -48,7 +48,7 @@ struct ARViewContainer: UIViewRepresentable {
             let currentMonth = Calendar.current.component(.month, from: currentDate)
             let currentDay = Calendar.current.component(.day, from: currentDate)
 //            let currentHour = Calendar.current.component(.hour, from: currentDate)
-            let currentHour = 19
+            let currentHour = 18
 //            let currentMinute = Calendar.current.component(.minute, from: currentDate)
             let currentMinute = 0
             let currentTimeFloat = moonHelper.timeToFloat(h: currentHour, m: currentMinute)
@@ -65,7 +65,8 @@ struct ARViewContainer: UIViewRepresentable {
                 var y = moonHelper.getYPos(x: x, s: seasonConstant, lat: currentLatitude)
                 var z = moonHelper.getZPos(x: x, s: seasonConstant, lat: currentLatitude)
                 
-                let rotated = moonHelper.rotation(x: x , y: y, z: z, headingValue: currentHeading)
+//                let rotated = moonHelper.rotation(x: x , y: y, z: z, headingValue: currentHeading)
+                let rotated = [x, y, z]
                 let adjusted = moonHelper.cameraPosAdjust(x: rotated[0], y: rotated[1], z: rotated[2])
                 
                 entity?.transform.translation.x = adjusted[0]

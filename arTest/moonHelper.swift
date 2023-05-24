@@ -64,7 +64,7 @@ class MoonHelper {
             moonTime += 24
         }
         
-        return cos(getRadian(degree: Float((moonTime - 6) * 15)))
+        return -cos(getRadian(degree: Float((moonTime - 6) * 15)))
     }
     
     func getYPos(x: Float, s: Float, lat: Float) -> Float
