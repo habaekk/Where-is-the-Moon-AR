@@ -29,6 +29,7 @@
 		57AABA4E2A189D0E00801CC5 /* headingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headingManager.swift; sourceTree = "<group>"; };
 		57AABA742A1CB1BC00801CC5 /* urlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urlManager.swift; sourceTree = "<group>"; };
 		57AABA762A1CB5B000801CC5 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		57C1A5D32A1DD30B00F86B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		57D21B9C2A037D0E00041D2E /* arTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D21B9F2A037D0E00041D2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57D21BA12A037D0E00041D2E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		57D21B9E2A037D0E00041D2E /* arTest */ = {
 			isa = PBXGroup;
 			children = (
+				57C1A5D32A1DD30B00F86B61 /* Info.plist */,
 				57D21B9F2A037D0E00041D2E /* AppDelegate.swift */,
 				57D21BA12A037D0E00041D2E /* ContentView.swift */,
 				57AABA482A14C7D800801CC5 /* ARView.swift */,
@@ -302,6 +304,7 @@
 				DEVELOPMENT_TEAM = 82VAB3XBCP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = arTest/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = aaa;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -334,6 +337,7 @@
 				DEVELOPMENT_TEAM = 82VAB3XBCP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = arTest/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = aaa;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
