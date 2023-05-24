@@ -39,27 +39,27 @@ struct ARViewContainer: UIViewRepresentable {
         UrlManager().urlRequest(with: UrlManager().urlManager()) { lunDay in
             
             let currentDate = Date()
-            let timediff = moonHelper.getTimeDifferenceSunMoon(lunDay: lunDay)
+//            let timediff = moonHelper.getTimeDifferenceSunMoon(lunDay: lunDay)
+            let timediff = moonHelper.getTimeDifferenceSunMoon(lunDay: 15)
             let currentLatitude = Float(locationManager.userLatitude)
             let currentHeading = Float(locationManager.userHeading)
             
             let currentYear = Calendar.current.component(.year, from: currentDate)
             let currentMonth = Calendar.current.component(.month, from: currentDate)
             let currentDay = Calendar.current.component(.day, from: currentDate)
-            let currentHour = Calendar.current.component(.hour, from: currentDate)
-            let currentMinute = Calendar.current.component(.minute, from: currentDate)
+//            let currentHour = Calendar.current.component(.hour, from: currentDate)
+            let currentHour = 0
+//            let currentMinute = Calendar.current.component(.minute, from: currentDate)
+            let currentMinute = 0
             let currentTimeFloat = moonHelper.timeToFloat(h: currentHour, m: currentMinute)
             
             let meridianAltitude = moonHelper.getMeridianAltitude(lat: Float(currentLatitude))
             let seasonConstant = moonHelper.getSeasonConstant(month: currentMonth)
             
             
+//            if (moonHelper.isMoonRise(sunTime: currentTimeFloat, timeDifference: timediff)) {
             
-            
-            
-            if (moonHelper.isMoonRise(sunTime: currentTimeFloat, timeDifference: timediff)) {
-            
-//            if (true) {
+            if (true) {
                 
                 var x = moonHelper.getXPos(sunTime: currentTimeFloat, timeDifference: timediff)
                 var y = moonHelper.getYPos(x: x, s: seasonConstant, lat: currentLatitude)
