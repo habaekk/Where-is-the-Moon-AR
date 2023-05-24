@@ -35,14 +35,14 @@ struct ARViewContainer: UIViewRepresentable {
     func sceneStart(_ entity: Entity?) -> Void {
         
         let moonHelper = MoonHelper()
+        print("Scene Start")
         UrlManager().urlRequest(with: UrlManager().urlManager()) { lunDay in
-            let currentDate = Date()
-
             
+            let currentDate = Date()
             let timediff = moonHelper.getTimeDifferenceSunMoon(lunDay: lunDay)
             let currentLatitude = Float(locationManager.userLatitude)
             let currentHeading = Float(locationManager.userHeading)
-
+            
             let currentYear = Calendar.current.component(.year, from: currentDate)
             let currentMonth = Calendar.current.component(.month, from: currentDate)
             let currentDay = Calendar.current.component(.day, from: currentDate)
@@ -53,7 +53,14 @@ struct ARViewContainer: UIViewRepresentable {
             let meridianAltitude = moonHelper.getMeridianAltitude(lat: Float(currentLatitude))
             let seasonConstant = moonHelper.getSeasonConstant(month: currentMonth)
             
-            if (MoonHelper().isMoonRise(sunTime: currentTimeFloat, timeDifference: timediff)) {
+            
+            
+            
+            
+            if (moonHelper.isMoonRise(sunTime: currentTimeFloat, timeDifference: timediff)) {
+            
+//            if (true) {
+                
                 var x = moonHelper.getXPos(sunTime: currentTimeFloat, timeDifference: timediff)
                 var y = moonHelper.getYPos(x: x, s: seasonConstant, lat: currentLatitude)
                 var z = moonHelper.getZPos(x: x, s: seasonConstant, lat: currentLatitude)
@@ -66,6 +73,18 @@ struct ARViewContainer: UIViewRepresentable {
                 entity?.transform.translation.z = adjusted[2]
             }
         }
+//        print(timediff)
+//        print(currentLatitude)
+//        print(currentHeading)
+//        print(currentYear)
+//        print(currentMonth)
+//        print(currentDay)
+//        print(currentHour)
+//        print(currentMinute)
+//        print(currentTimeFloat)
+//        print(meridianAltitude)
+//        print(seasonConstant)
+//        print(moonHelper.isMoonRise(sunTime: currentTimeFloat, timeDifference: timediff))
     }
     
     func updateUIView(_ uiView: ARView, context: Context) {}
