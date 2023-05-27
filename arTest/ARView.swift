@@ -7,7 +7,6 @@
 
 import SwiftUI
 import RealityKit
-//import ARKit
 
 struct ARViewContainer: UIViewRepresentable {
     @ObservedObject private var locationManager = LocationManager()
@@ -25,9 +24,6 @@ struct ARViewContainer: UIViewRepresentable {
         
         boxAnchor.actions.notifier.onAction = sceneStart
         
-//        let moonAnchor = try! Experience.loadMoon()
-//        arView.scene.anchors.append(moonAnchor)
-        
         return arView
         
     }
@@ -40,14 +36,14 @@ struct ARViewContainer: UIViewRepresentable {
             
             let currentDate = Date()
             let timediff = moonHelper.getTimeDifferenceSunMoon(lunDay: lunDay)
-//            let timediff = moonHelper.getTimeDifferenceSunMoon(lunDay:22)
+//            let timediff = moonHelper.getTimeDifferenceSunMoon(lunDay:15)
             let currentLatitude = Float(locationManager.userLatitude)
-//            let currentLatitude = Float(37.0)
+//            let currentLatitude = Float(60.0)
             let currentHeading = Float(locationManager.userHeading)
             
             let currentMonth = Calendar.current.component(.month, from: currentDate)
             let currentHour = Calendar.current.component(.hour, from: currentDate)
-//            let currentHour = 6
+//            let currentHour = 0
             let currentMinute = Calendar.current.component(.minute, from: currentDate)
 //            let currentMinute = 0
             let currentTimeFloat = moonHelper.timeToFloat(h: currentHour, m: currentMinute)
@@ -65,6 +61,7 @@ struct ARViewContainer: UIViewRepresentable {
                 
                 let rotated = moonHelper.rotation(x: x , y: y, z: z, headingValue: currentHeading)
                 let adjusted = moonHelper.cameraPosAdjust(x: rotated[0], y: rotated[1], z: rotated[2])
+//                let adjusted = moonHelper.cameraPosAdjust(x: x, y: y, z: z)
                 
                 entity?.transform.translation.x = adjusted[0]
                 entity?.transform.translation.y = adjusted[1]
