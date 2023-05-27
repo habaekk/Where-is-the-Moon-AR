@@ -99,39 +99,6 @@ class MoonHelper {
         return zPos
     }
     
-    // 음력에 따른 달의 위상
-    func moonPhase(when day: Int) -> String {
-        if day > 0 && day < 4 {
-            return "newMoon"
-        } else if day >= 4 && day < 6 {
-            return "newMoon2"
-        } else if day >= 6 && day < 9 {
-            return "firstQuarter"
-        } else if day >= 9 && day < 14 {
-            return "firstQuarter2"
-        } else if day >= 14 && day < 16 {
-            return "fullMoon"
-        } else if day == 16 {
-            return "fullMoon2"
-        } else if day == 17 {
-            return "fullMoon3"
-        } else if day == 18 {
-            return "fullMoon4"
-        } else if day == 19 {
-            return "fullMoon5"
-        } else if day == 20 {
-            return "fullMoon6"
-        } else if day >= 21 && day < 23 {
-            return "lastQuarter"
-        } else if day >= 23 && day < 26 {
-            return "lastQuarter2"
-        } else if day >= 26 && day < 30 {
-            return "lastQuarter3"
-        } else {
-            return "testMoon"
-        }
-    }
-    
     // 달의 위상에 따른 태양과의 상대적인 위치를 보정하기 위함
     func getTimeDifferenceSunMoon(lunDay: Int) -> Double {
         return (Double(lunDay) * (360/29.5)) * (1/15)
@@ -177,6 +144,7 @@ class MoonHelper {
         return [aX, aY, aZ]
     }
     
+    // 시간을 십진수로 바꿈
     func timeToFloat(h: Int, m: Int) -> Float {
         let result = Float(h) + (Float(m) / 60.0)
         return result
