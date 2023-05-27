@@ -11,4 +11,6 @@ This is an IOS Application using AR to observe a position of ot the moon.
 ![CV_moonTime](https://github.com/habaekk/moonAR/assets/74465964/31180f60-ec00-4d95-97d1-b6cb0fa4a14f)  
 
 ## DEMO
+Latitude: 37, Moon Phase: First Quater, Time: 23.00  
+The moon is falling to the West Sky.  
 https://youtube.com/shorts/ytwRV9STICQ 
