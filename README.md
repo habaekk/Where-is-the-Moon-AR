@@ -1,6 +1,7 @@
 # moonAR
 You can see exact moon position with IPhone.  
-IDE: XCode   Testing Device: IPhone12
+IDE: XCode   
+Testing Device: IPhone12
 
 ## Description
 This is an IOS Application using AR to observe a position of ot the moon.
