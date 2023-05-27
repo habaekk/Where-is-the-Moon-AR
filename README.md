@@ -1,4 +1,4 @@
-# moonAR
+# Where is the Moon? AR
 You can see exact moon position with IPhone.  
 IDE: XCode   
 Testing Device: IPhone12
