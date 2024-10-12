@@ -1,6 +1,10 @@
 
 # 🌕 Where is the Moon? AR
 
+[English](https://github.com/habaekk/Where-is-the-Moon-AR) | [한국어](https://github.com/habaekk/Where-is-the-Moon-AR/blob/main/README_kr.md)
+
+  
+
 The iOS paid app `Moon Shape Pro` allows users to intuitively check the real-time position of the moon using the iPhone camera. Building on the features of the free app `Moon Shape Widget`, we have enhanced the capabilities significantly and released `Moon Shape Pro` as a premium version. As a special offering, we have made one of the key features, the **AR function**, publicly available so that anyone can experience the position of the moon through augmented reality.  
 
 **Check it out on the App Store**: [Moon Shape Pro](https://apps.apple.com/kr/app/moon-shape-pro/id6450383619?l=en)
