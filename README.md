@@ -16,7 +16,7 @@ The iOS paid app `Moon Shape Pro` allows users to intuitively check the real-tim
     With `Moon Shape Pro`, you can easily track the moon's changing phases and even predict future phases using the calendar feature.
     
 
-**Ranked #1 in the Weather category** on the App Store!  
+**Ranked  🥇#1🥇 in the Weather category** on the App Store! 
 ![1_1](https://github.com/user-attachments/assets/47010ad7-7003-44d1-b6ee-8c706b90cd2e)
 
 ## 🔭 Key Features
